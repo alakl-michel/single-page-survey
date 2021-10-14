@@ -1,0 +1,830 @@
+$Bold: Poppins-SemiBold, Arial, sans-serif;
+$Regular: Poppins-Regular, Arial, sans-serif;
+$Black:#646464;
+$Black2:#454545;
+$Green:#94c642;
+$Font1vw: 17px;
+$Font2vw:38px;
+$Font3vw:58px;
+
+@font-face {
+	font-family: "Poppins-Regular";
+	src: url("../fonts/Poppins-Regular.woff2") format("woff2"),
+	url("../fonts/Poppins-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_BebasNeue-Regular';
+	src: url('../fonts/BebasNeue-Regular.eot');
+	src: local('☺'), url('../fonts/BebasNeue-Regular.woff') format('woff'), url('../fonts/BebasNeue-Regular.ttf') format('truetype'), url('../fonts/BebasNeue-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Poppins-Medium";
+	src: url("../fonts/Poppins-Medium.woff2") format("woff2"),
+		url("../fonts/Poppins-Medium.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Poppins-Light";
+	src: url("../fonts/Poppins-Light.woff2") format("woff2"),
+		url("../fonts/Poppins-Light.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Poppins-ExtraLight";
+	src: url("../fonts/Poppins-ExtraLight.woff2") format("woff2"),
+		url("../fonts/Poppins-ExtraLight.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Poppins-SemiBold";
+	src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"),
+		url("../fonts/Poppins-SemiBold.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.poppingsReg {
+	font-family: "Poppins-Regular", Arial, sans-serif;
+	font-weight: normal;
+}
+
+.poppingsMedium {
+	font-family: "Poppins-Medium", Arial, sans-serif;
+	font-weight: normal;
+}
+
+.poppingsLight {
+	font-family: "Poppins-Light", Arial, sans-serif;
+	font-weight: normal;
+}
+
+.poppingsExtraLight {
+	font-family: "Poppins-ExtraLight", Arial, sans-serif;
+	font-weight: normal;
+}
+
+.poppingsSemiBold {
+	font-family: "Poppins-SemiBold", Arial, sans-serif;
+	font-weight: normal;
+}
+
+
+body,h1,h2,h3,h4,h5,h6,img,a,p,dl,dt,dd,input,textarea,select,ul,li button,area,map{margin: 0; padding: 0; list-style: none; text-decoration: none; outline: none; border: none;}
+
+html,body{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+
+.wrapper{
+	float:left;
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	min-height:100%;
+}
+.center_left{
+	left:50%;
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform:  translate(-50%, 0%);
+    -o-transform:  translate(-50%, 0%);
+    -ms-transform:  translate(-50%, 0%);            
+    transform:  translate(-50%, 0%);
+}
+.center_top{
+	top:50%;
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform:  translate(0%, -50%);
+    -o-transform:  translate(0%, -50%);
+    -ms-transform:  translate(0%, -50%);           
+    transform:  translate(0%, -50%);
+}
+.center_both{
+	top:50%;
+	left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform:  translate(-50%, -50%);
+    -o-transform:  translate(-50%, -50%);
+    -ms-transform:  translate(-50%, -50%);           
+    transform:  translate(-50%, -50%);
+}
+.transition{
+	-webkit-transition: all 0.2s ease-in-out;/* Safari 3.2+, Chrome */
+	-moz-transition: all 0.2s ease-in-out;/* Firefox 4-15 */
+	-o-transition: all 0.2s ease-in-out;/* Opera 10.5-12.00 */
+	transition: all 0.2s ease-in-out;/* Firefox 16+, Opera 12.50+ */
+}
+.safearea{
+	width: calc(100% - 2%);
+	max-width: 1400px;
+	display: flex;
+	position:relative;
+	left:50%;
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform:  translate(-50%, 0%);
+    -o-transform:  translate(-50%, 0%);
+    -ms-transform:  translate(-50%, 0%);            
+    transform:  translate(-50%, 0%);
+}
+.width-100{
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.content{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	padding-bottom: 81px;
+	margin-bottom: 100px;
+}
+
+
+.Header{
+    padding: 20px 0px;
+    display: flex;
+    font-family: $Bold;
+    z-index: 11;
+    &__Logo{
+        display: flex;
+        flex:1;
+        margin-left: 2%;
+    }
+	&__Right{
+        display: flex;
+        align-items: center;
+        margin-right: 2%;
+        position: relative;
+		font-family: $Bold;
+		font-size: 12px;
+		div{
+			background-repeat: no-repeat;
+			background-position: left center;
+			select{
+				cursor: pointer;
+				font-family: $Bold;
+				font-size: 12px;
+			}
+		}
+		&Mail{
+			background-image: url('../../images/mail.svg');
+			padding-left: 30px;
+			a{
+				color:$Black;
+			}
+		}
+		&Currency{
+			background-image: url('../../images/coins.svg');
+			padding-left: 25px;
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+		&Lang{
+			background-image: url('../../images/lang.svg');
+			padding-left: 25px;
+		}
+	}
+}
+
+.Banner{
+	background-color: #b4b4b4;
+	width: 100%;
+	height: 500px;
+	background-image: url('../../images/banner.jpg');
+	background-position: right center;
+	background-size: contain;
+	display: flex;
+	background-repeat: no-repeat;
+	align-items: center;
+	&__Content{
+		background-color: rgba(148, 198, 66, 0.8);
+		border-radius: 10px;
+		width: 50vw;
+		height: 60vh;
+		max-width: 700px;
+		max-height: 370px;
+		margin-left: 2%;
+		padding: 0px 2% ;
+		text-transform: uppercase;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		h3{
+			font-family: 'Conv_BebasNeue-Regular';
+			color: #fff;
+			font-size: 70px;
+			line-height: 70px;
+			font-weight: 100;
+			margin-left: 10px;
+		}
+		h4{
+			font-family: $Bold;
+			background-color: #fff;
+			color: $Green;
+			align-self: flex-start;
+			padding: 20px 20px;
+			border-radius: 15px;
+			margin-top: 40px;
+			font-size: $Font1vw;
+		}
+	}
+}
+
+.Builder{
+	margin-top: 30px;
+	&__Holder{
+		display: flex;
+		align-items: center;
+		width: 100%;
+		flex-direction: column;
+		margin-left: 2%;
+		margin-right: 2%;
+		h3{
+			font-family: $Bold;
+			color: $Green;
+			font-size: $Font3vw;
+			line-height: $Font3vw;
+			margin-top: 40px;
+		}
+		h4{
+			font-size: $Font1vw;
+			color: $Black2;
+			margin-top: 15px;
+			font-family: $Regular;
+		}
+		h2{
+			font-family: $Bold;
+			color: $Green;
+			font-size: $Font2vw;
+			line-height: $Font2vw;
+			align-self: flex-start;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+			margin-top: 50px;
+		}
+	}
+	&__Sect{
+		width: 100%;
+		display: flex;
+		padding: 50px 0px;
+		flex-direction: column;
+		position: relative;
+		&__Head{
+			display: flex;
+			align-items: center;
+			flex: 1;
+			margin-bottom: 10px;
+			h5{
+				font-size: $Font1vw;
+				color: $Black2;
+				font-family: $Bold;
+				text-transform: uppercase;
+			}
+			div{
+				flex:1;
+				height: 1px;
+				border-bottom:1px dashed #454545;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			span{
+				font-size: $Font1vw;
+				color: $Green;
+				font-family: $Bold;
+				text-transform: uppercase;
+			}
+		}
+		&__Entry{
+			display: flex;
+			margin-left: 2%;
+			margin-top: 10px;
+			align-items: center;
+			position: relative;
+			.unchecked{
+				width: 30px;
+				height: 30px;
+				background-image: url('../../images/check_inactive.svg');
+			}
+			.check{
+				background-image: url('../../images/check_active.svg');
+			}
+			h5{
+				font-size: $Font1vw;
+				color: $Green;
+				font-family: $Bold;
+				margin-left: 10px;
+				margin-right: 20px;
+				position: relative;
+				float: left;
+				display: flex;
+    			line-height: 22px;
+				cursor: pointer;
+			}
+			input[type="checkbox"]{
+				opacity: 0;
+			}
+			label{
+				font-size: $Font1vw;
+				color: $Black2;
+				font-family: $Regular;
+				flex: 0 0 30%;
+				display: flex;
+				position: relative;
+			}
+			select{
+				width: 200px;
+				border:1px solid #000;
+				font-size: $Font1vw;
+				color: $Black2;
+				font-family: $Regular;
+				padding: 5px 15px;
+				appearance: none;
+				background-image: url('../../images/arrow_down.svg');
+				background-repeat: no-repeat;
+				background-position: 95% center;
+				background-size: 7%;
+				height: 30px;
+				margin-left: 25px;
+				line-height: 20px;
+			}
+			.delete{
+				cursor: pointer;
+				background-image: url(../../images/delete.svg);
+				border: 1px solid #000;
+				padding: 5px;
+				background-repeat: no-repeat;
+				background-size:15px 17px;
+				height: 18px;
+				width: 30px;
+				margin-left: 15px;
+				background-position: center;
+			}
+			&Add{
+				border:1px solid #000;
+				justify-content: center;
+				font-size: $Font1vw;
+				color: $Black2;
+				font-family: $Bold;
+				background-color: #fff;
+				span{
+					width: 37px;
+					text-align: center;
+					position: relative;
+					float: left;
+					cursor: pointer;
+					height: 30px;
+  			  		line-height: 30px;
+				}
+				input{
+					width: 35px;
+					position: relative;
+					float: left;
+					height: 30px;
+					text-align: center;
+					font-size: $Font1vw;
+					color: $Black2;
+					font-family: $Bold;
+					border-left: 1px solid #000;
+					border-right: 1px solid #000;
+				}
+			}
+		}
+		ul li{
+			margin-left: 15px;
+			font-size: $Font1vw;
+			color: $Black2;
+			font-family: $Regular;
+		}
+		ul li::before {
+			content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+			color: $Green; /* Change the color */
+			font-weight: bold; /* If you want it to be bold */
+			display: inline-block; /* Needed to add space between the bullet and the text */
+			width: 1em; /* Also needed for space (tweak if needed) */
+		}
+	}
+}
+
+.Footer{
+	background-color: #2f2f31;
+	padding: 20px 0px;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	&__Holder{
+		display: flex;
+		width: 100%;
+		margin-left: 2%;
+		margin-right: 2%;
+		align-items: center;
+		div{
+			font-size: $Font1vw;
+			color: #fff;
+			background-color:$Green;
+			font-family: $Bold;
+			padding: 10px;
+			padding-left: 20px;
+			padding-right: 20px;
+			text-align: center;
+			line-height: 30px;
+			border-radius: 5px;
+			cursor: pointer;
+			text-transform: uppercase;
+			&:hover{
+				background-color: #78a52f;
+			}
+		}
+		span{
+			flex: 1;
+			color: $Green;
+			font-size: $Font3vw;
+			font-family: $Bold;
+		}
+	}
+}
+
+.Contact{
+	
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(255,255,255,0.7);
+	z-index: 11;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&__Holder{
+		background-color: #2f2f31;
+		width: 768px;
+		height: 70vh;
+		position: relative;
+		form{
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+		input[type="submit"]{
+			font-size: $Font1vw;
+			color: #fff;
+			background-color:$Green;
+			font-family: $Bold;
+			width: 150px;
+			text-align: center;
+			height: 40px;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+		h2{
+			color: #fff;
+			font-size: $Font3vw;
+			font-family: $Bold;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+		}
+		&__Inner{
+			display: flex;
+			flex-wrap: wrap;
+			width: 85%;
+			justify-content: space-evenly;
+		}
+		&__Field{
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 20px;
+			label{
+				font-size: $Font1vw;
+				color: #fff;
+				font-family: $Regular;
+				margin-bottom: 5px;
+			}
+			input{
+				background-color: rgba(255,255,255,0.1);
+				height: 40px;
+				border-radius: 5px;
+				padding-left: 15px;
+				padding-right: 15px;
+				color: #fff;
+				font-size: $Font1vw;
+				font-family: $Regular;
+				width: 235px;
+			}
+		}
+		.seperator{
+			flex-basis: 100%;
+		}
+	}
+}
+
+
+@media screen and (min-width:1200px){
+.Banner{
+	background-position: 75% center;
+}
+}
+
+
+
+.currency{
+	margin-right: 5px;
+}
+
+.graybg{
+	background-color: #f7f7f7;
+}
+
+.graybg::before{
+	content: '';
+	width: 4000px;
+	left: -4000px;
+	height: 100%;
+	position: absolute;
+	background-color: #f7f7f7;
+	top: 0px;
+}
+
+.graybg::after{
+	content: '';
+	width: 4000px;
+	right: -4000px;
+	height: 100%;
+	position: absolute;
+	background-color: #f7f7f7;
+	top: 0px;
+}
+
+.add_more{
+	font-size: $Font1vw;
+	color: #fff;
+	background-color:$Green;
+	font-family: $Bold;
+	align-self: flex-start;
+	text-align: center;
+	line-height: 20px;
+	padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+	border-radius: 5px;
+	margin-top: 30px;
+	cursor: pointer;
+}
+.add_more:hover{
+	background-color: #78a52f;
+}
+
+input[type=checkbox] {
+	display: none;
+}
+  
+.customCheckbox + label:before {
+	content: "";
+	border: 1px solid #C6C6C5;
+	border-radius: 5px;
+	float: left;
+	position: relative;
+	flex: 0 0 20px;
+	height: 20px;
+	vertical-align: bottom;
+	color: transparent;
+	transition: .2s;
+	background-color: #ffffff;
+	margin-right: 10px;
+}
+.customCheckbox:checked + label:before {
+	background-color: $Green;
+	border-color: $Green;
+	color: #fff;
+}
+.customCheckbox + label:after{
+	content: "";
+	position: absolute;
+	left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 11px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+  	-webkit-transform: rotate(45deg);
+  	-ms-transform: rotate(45deg);
+  	transform: rotate(45deg);
+  	display: none;
+}
+.customCheckbox:checked + label:after {
+  display: block;
+}
+.feature_desc{
+	color: $Black2;
+	font-family: $Regular;
+	font-weight: normal;
+	margin-left: 10px;
+	position: relative;
+    float: left;
+    width: auto;
+}
+.label_with_select{
+	flex:none !important;
+}
+.delete_page{
+	cursor: pointer;
+    background-image: url(../../images/delete.svg);
+    border: 1px solid #000 !important;
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-size: 15px 17px;
+    height: 18px !important;
+    width: 30px;
+    margin-left: 15px !important;
+    flex: none !important;
+    background-position: center;
+}
+.custom_pages_section{
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.add_custom_page_button{
+	font-size: 15px;
+    font-family: Poppins-SemiBold, Arial, sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    color: #94c642;
+    margin-top: 40px;
+    margin-bottom: -20px;
+	z-index: 2;
+}
+.add_custom_page_button:hover{
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+.get_in_touch:hover {
+    background-color: #78a52f;
+}
+.close_contact{
+	position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 23px;
+    z-index: 1;
+}
+.customPage__titleInput{
+    font-family: Poppins-SemiBold, Arial, sans-serif;
+    color: #454545;
+	text-transform: uppercase;
+
+	legend{
+		font-size: 13px;
+		color: #999999;
+	}
+	input{
+		font-size: 15px;
+		padding: 3px 5px;
+		text-transform: uppercase;
+
+	}
+}
+
+
+
+
+@media screen and (max-width:1200px){
+.Builder__Sect__Entry label{
+	flex: 0 0 40%;
+}
+
+}
+
+
+
+@media screen and (max-width:1000px){
+	.Builder__Sect__Entry label{
+		flex: 1;
+	}
+	.Banner__Content h3 {
+		font-size: 50px;
+		line-height: 50px;
+	}
+	.Contact__Holder {
+		width: 700px;
+	}
+
+	
+}
+
+@media screen and (max-width:760px){
+	.Header__RightCurrency {
+		margin-left: 20px;
+		margin-right: 10px;
+	}
+	.Footer__Holder span{
+		font-size:20px;
+	}
+	.Footer__Holder div {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.Banner{
+		background-position: center top;
+		height: 400px;
+	}
+	.Banner__Content{
+		width: 100%;
+		height: auto;
+		padding-top: 30px;
+		padding-bottom: 25px;
+		margin-left: 0%;
+		margin-top: 125px;
+	}
+	.Banner__Content h3 {
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.Builder__Holder h3 {
+		font-size: 38px;
+		line-height: 38px;
+		text-align: center;
+	}
+	.Builder__Holder h2 {
+		font-size: 27px;
+		margin-top: 20px;
+	}
+	.Builder__Sect__Entry h5{
+		flex-wrap: wrap;
+		font-size: 16px;
+	}
+	.feature_desc{
+		width: 260px;
+		margin-left: 0px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		font-size: 15px;
+	}
+	.Builder__Sect__Entry{
+		flex-wrap: wrap;
+	}
+	.Builder__Sect__EntryAdd {
+		margin-left: 45px;
+		margin-bottom: 15px;
+	}
+	.Builder__Sect ul li {
+		font-size: 15px;
+	}
+	.Builder__Sect__Head h5 {
+		font-size: 16px;
+	}
+	.Builder__Sect__Head span{
+		font-size: 16px;
+	}
+	.Builder__Sect__Entry label{
+		width: 100%;
+		margin-top: 10px;
+	}
+	.Builder__Sect__Entry select {
+		margin-left: 40px;
+		margin-top: 10px;
+	}
+	.Builder__Sect__Entry .delete {
+		margin-left: 6px;
+		margin-top: 10px;
+	}
+	.Contact__Holder {
+		width: 100%;
+		height: 100vh;
+	}
+	.Contact__Holder h2{
+		font-size: 28px;
+	}
+	.add_more{
+		margin-left: 45px;
+		margin-top: 20px;
+	}
+
+	
+}
